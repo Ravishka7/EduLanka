@@ -1,12 +1,22 @@
 <x-guest-layout>
+    
     <x-authentication-card>
         <x-slot name="logo">
             <x-authentication-card-logo />
         </x-slot>
 
-        <x-validation-errors class="mb-4" />
+        <!-- https://play.tailwindcss.com/MIwj5Sp9pw -->
 
-        <form method="POST" action="{{ route('register') }}">
+    <div class="flex bg-white rounded-lg shadow-lg overflow-hidden  lg:max-w-x2">
+        <div class="hidden lg:block lg:w-full bg-cover"
+            style="background-image:url('https://images.unsplash.com/photo-1581726690015-c9861fa5057f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c2Nob29sfGVufDB8MXwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60')">
+        </div>
+        <div class="w-1/2 p-8 lg:max-w-x2">
+            <p class="text-xl text-gray-600 text-center">Welcome!</p>
+
+            <x-validation-errors class="mb-4" />
+
+<form method="POST" action="{{ route('register') }}">
             @csrf
 
             <div>
@@ -56,5 +66,10 @@
                 </x-button>
             </div>
         </form>
-    </x-authentication-card>
+            
+        </div>
+    </div>
+
+    </x-authentication-card> 
+    
 </x-guest-layout>

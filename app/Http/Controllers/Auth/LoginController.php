@@ -68,7 +68,9 @@ class LoginController extends Controller
                     return redirect('/login')->with('error','ooops something went wrong');    
             }
         }else{
-            return redirect('/login');
+            return back()->withInput($request->only('email'))->withErrors([
+                'email' => 'Invalid credentials',
+            ]);
         }
     }
 }
