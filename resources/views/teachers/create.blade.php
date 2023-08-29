@@ -24,9 +24,9 @@
                 <input type="text" name="name"   id="name" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" required/>
               </div>
 
-              <div class="md:col-span-5">
-                <label for="email">Email Address</label>
-                <input type="text" name="email" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"  placeholder="email@domain.com" required/>
+              <div class="md:col-span-3">
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" id="subject" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" />
               </div>
 
               <div class="md:col-span-3">
@@ -34,17 +34,21 @@
                 <input type="text" name="section" id="section" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" />
               </div>
 
-              <div class="md:col-span-3">
-                <label for="subject">Subject</label>
-                <input type="text" name="subject" id="subject" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" />
+              <div class="md:col-span-2">
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" id="phone" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" />
+              </div>    
+
+              <div class="md:col-span-5">
+                <label for="email">Email Address</label>
+                <input type="text" name="email" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"  placeholder="email@domain.com" required/>
               </div>
 
               <div class="md:col-span-5">
-                <label for="details">Details</label>
-                <textarea name="details" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"></textarea>
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" />
               </div>
-
-      
+              
               <div class="md:col-span-5 text-right">
                 <div class="inline-flex items-end">
                   <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add</button>

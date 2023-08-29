@@ -5,9 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Teacher extends Model
+class Lesson extends Model
 {
-    protected $fillable = ['name', 'subject', 'section', 'phone', 'email', 'address'];
-    
     use HasFactory;
 }

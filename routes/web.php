@@ -22,6 +22,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/uploadpage', [App\Http\Controllers\HomeController::class, 'uploadpage'])->name('uploadpage');
+Route::post('/uploadlesson', [App\Http\Controllers\HomeController::class, 'store'])->name('uploadlesson');
+Route::get('/show', [App\Http\Controllers\HomeController::class, 'show'])->name('show');
+Route::get('/download{file}', [App\Http\Controllers\HomeController::class, 'download'])->name('download');
+Route::get('/view{id}', [App\Http\Controllers\HomeController::class, 'view'])->name('view');
+
+
+
+
 Route::get('admin',function(){
     return view('admin');
 })->name('admin')->middleware('admin');
@@ -47,6 +56,40 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+Route::get('/student', function () {
+    return view('student');
+})->name('student'); // Add a name to the route
+
+Route::get('/studentcalendar', function () {
+    return view('studentcalendar');
+})->name('studentcalendar');
+
+Route::get('/studentsubjects', function () {
+    return view('studentsubjects');
+})->name('studentsubjects');
+
+Route::get('/studentsub', function () {
+    return view('studentsub');
+})->name('studentsub');
+
+
+
+
+
+
+
+Route::get('/teacher', function () {
+    return view('teacher');
+})->name('teacher'); // Add a name to the route
+
+Route::get('/teachercourse', function () {
+    return view('teachercourse');
+})->name('teachercourse');
+
+
+
 
 Route::get('/students', [StudentController::class, 'index'])->name('students.index');
 Route::get('/students/create', [StudentController::class, 'create'])->name('students.create');

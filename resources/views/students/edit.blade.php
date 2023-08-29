@@ -20,14 +20,10 @@
 
           <div class="lg:col-span-2">
             <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
+                         
               <div class="md:col-span-5">
                 <label for="name">Full Name</label>
                 <input type="text" name="name" value="{{ $student->name }}"  id="name" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" required/>
-              </div>
-
-              <div class="md:col-span-5">
-                <label for="email">Email Address</label>
-                <input type="text" name="email" value="{{ $student->email }}" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"  placeholder="email@domain.com" required/>
               </div>
 
               <div class="md:col-span-3">
@@ -35,12 +31,26 @@
                 <input type="text" name="class" value="{{ $student->class }}" id="class" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" />
               </div>
 
-              <div class="md:col-span-5">
-                <label for="details">Details</label>
-                <textarea name="details" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50">{{ $student->details }}</textarea>
+              <div class="md:col-span-2">
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" value="{{ $student->phone }}" id="phone" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" />
               </div>
 
-      
+              <div class="md:col-span-5">
+                <label for="email">Email Address</label>
+                <input type="text" name="email" value="{{ $student->email }}" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"  placeholder="email@domain.com" required/>
+              </div>
+
+              <div class="md:col-span-5">
+                <label for="address">Address</label>
+                <input type="text" name="address" value="{{ $student->address }}" id="address" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" />
+              </div>
+
+              <div class="md:col-span-5">
+                <label for="guardian_name">Guardian Name</label>
+                <input type="text" name="guardian_name" value="{{ $student->guardian_name }}" id="guardian_name" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" />
+              </div>
+     
               <div class="md:col-span-5 text-right">
                 <div class="inline-flex items-end">
                   <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Update</button>

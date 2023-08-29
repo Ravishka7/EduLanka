@@ -8,10 +8,16 @@ use App\Models\Student;
 class StudentController extends Controller
 {
     // Show all students (Index)
-    public function index()
+    public function index(Request $request)
     {
-        $students = Student::all();
-        return view('students.index', compact('students'));
+        $search = $request->query('search');
+        
+        $students = Student::when($search, function ($query, $search) {
+            return $query->where('student_id', 'like', "%$search%")
+                         ->orWhere('class', 'like', "%$search%");
+        })->get();
+        
+        return view('students.index', compact('students', 'search'));
     }
 
     // Show the form to create a new student (Create)
@@ -25,9 +31,11 @@ class StudentController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required',
-            'email' => 'required',
             'class' => 'required',
-            'details' => 'nullable',
+            'phone' => 'required',
+            'email' => 'required',
+            'address' => 'required',
+            'guardian_name' => 'required',
         ]);
 
         Student::create($validatedData);

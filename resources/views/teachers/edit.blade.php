@@ -26,10 +26,6 @@
               </div>
 
               <div class="md:col-span-5">
-                <label for="email">Email Address</label>
-                <input type="text" name="email" value="{{ $teacher->email }}" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"  placeholder="email@domain.com" required/>
-              </div>
-              <div class="md:col-span-5">
                 <label for="section">Section</label>
                 <input type="text" name="section" value="{{ $teacher->section }}" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" required/>
               </div>
@@ -39,12 +35,21 @@
                 <input type="text" name="subject" value="{{ $teacher->subject }}" id="subject" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" />
               </div>
 
-              <div class="md:col-span-5">
-                <label for="details">Details</label>
-                <textarea name="details" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50">{{ $teacher->details }}</textarea>
+              <div class="md:col-span-2">
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" value="{{ $teacher->phone }}" id="phone" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" />
               </div>
 
-      
+              <div class="md:col-span-5">
+                <label for="email">Email Address</label>
+                <input type="text" name="email" value="{{ $teacher->email }}" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"  placeholder="email@domain.com" required/>
+              </div>
+
+              <div class="md:col-span-5">
+                <label for="address">Address</label>
+                <input type="text" name="address" value="{{ $teacher->address }}" id="address" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" />
+              </div>
+
               <div class="md:col-span-5 text-right">
                 <div class="inline-flex items-end">
                   <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Update</button>
